@@ -1,0 +1,1 @@
+{"version":3,"file":"reminder.js","sourceRoot":"","sources":["reminder.ts"],"names":[],"mappings":";;;;;;;AAAA,qBAA0B,eAAe,CAAC,CAAA;AAO1C;IAEE,sBAAmB,OAAsB;QAAtB,YAAO,GAAP,OAAO,CAAe;IAEzC,CAAC;IARH;QAAC,gBAAS,CAAC;YACT,QAAQ,EAAE,eAAe;YACzB,WAAW,EAAE,eAAe;SAC7B,CAAC;oBAAA;IAOF,mBAAC;AAAD,CAAC,AAND,IAMC;AANY,oBAAY,eAMxB,CAAA"}

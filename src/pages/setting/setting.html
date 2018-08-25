@@ -1,0 +1,160 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle right style="display: block !important;">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <!--<ion-icon ios="ios-arrow-back" md="md-arrow-back" class="arrow-back-custom"></ion-icon>-->
+        <ion-title class="page-tittle-custom">Setting</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content cache-view="false" padding classs="">
+    <ion-grid class="setting-grid">
+        <ion-row>
+            <ion-col col-12>
+                <div class="welcome_box">
+                    <h1>Update Profile</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 class="edit-profile-column">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/name.png" alt="" class="name-img">
+                            <button ion-button class="edit-btn">
+                                <img class="edit-img" src="assets/img/edit.png" alt="" height="14px" width="14px">
+                            </button>
+                        </ion-label>
+                        <ion-input type="text"  [(ngModel)]="user.first_name" #fname="ngModel" pattern="[a-zA-Z]+" placeholder="FIRST NAME"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+          <div [hidden]="fname.valid || fname.pristine" class="alert alert-danger help-block">
+            <div [hidden]="!fname.hasError('pattern')">Only alphabets are allowed</div>
+            <div [hidden]="!fname.hasError('required')">FIrst name is required</div>
+          </div>
+        </ion-row>
+      <ion-row>
+            <ion-col col-12 class="edit-profile-column">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/name.png" alt="" class="name-img">
+                            <button ion-button class="edit-btn">
+                                <img class="edit-img" src="assets/img/edit.png" alt="" height="14px" width="14px">
+                            </button>
+                        </ion-label>
+                        <ion-input type="text" #lname="ngModel" pattern="[a-zA-Z]+" [(ngModel)]="user.last_name" placeholder="LAST NAME"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        <div [hidden]="lname.valid || lname.pristine"
+             class="alert alert-danger help-block">
+          <div [hidden]="!lname.hasError('required')">Last name is required</div>
+          <div [hidden]="!lname.hasError('pattern')">Only alphabets are allowed</div>
+        </div>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 class="edit-profile-column">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/phone.png" alt="" class="phone-img">
+                            <button ion-button class="edit-btn">
+                                <img class="edit-img" src="assets/img/edit.png" alt="" height="14px" width="14px">
+                            </button>
+                        </ion-label>
+                        <ion-input type="number" [(ngModel)]="user.phone" placeholder="PHONE"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+          <p class="help-block" *ngIf="user.phone?.length < 10 && user.phone?.length >= 1 ">
+            Phone number must be greater than 10 digits
+          </p>
+        </ion-row>
+        <!--<ion-row>-->
+            <!--<ion-col col-12 class="edit-profile-column">-->
+                <!--<ion-list>-->
+                    <!--<ion-item>-->
+                        <!--<ion-label>-->
+                            <!--<img src="assets/img/email2.png" alt="" class="email2-img">-->
+                            <!--<button ion-button class="edit-btn">-->
+                                <!--<img class="edit-img" src="assets/img/edit.png" alt="" height="14px" width="14px">-->
+                            <!--</button>-->
+                        <!--</ion-label>-->
+                        <!--<ion-input type="email" placeholder="EMAIL ADDRESS"></ion-input>-->
+                    <!--</ion-item>-->
+                <!--</ion-list>-->
+            <!--</ion-col>-->
+        <!--</ion-row>-->
+        <ion-row>
+            <ion-col col-12 class="edit-profile-column">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/pass2.png" alt="" class="pass2-img">
+                            <button ion-button class="edit-btn">
+                                <img class="edit-img" src="assets/img/edit.png" alt="" height="14px" width="14px">
+                            </button>
+                        </ion-label>
+                        <ion-input type="password" [(ngModel)]="user.oldPassword"placeholder="OLD PASSWORD"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 class="edit-profile-column">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/pass2.png" alt="" class="pass2-img">
+                            <button ion-button class="edit-btn">
+                                <img class="edit-img" src="assets/img/edit.png" alt="" height="14px" width="14px">
+                            </button>
+                        </ion-label>
+                        <ion-input type="password" pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$"
+                                   #password="ngModel" [(ngModel)]="user.password" placeholder="NEW PASSWORD"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+          <div [hidden]="password.valid || password.pristine" class="alert alert-danger help-block">
+            <div [hidden]="!password.hasError('pattern')">Password format must include uppercase,lowercase,digits and atleast 8 characters
+            </div>
+          </div>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 class="edit-profile-column">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/pass2.png" alt="" class="pass2-img">
+                            <button ion-button class="edit-btn">
+                                <img class="edit-img" src="assets/img/edit.png" alt="" height="14px" width="14px">
+                            </button>
+                        </ion-label>
+                        <ion-input type="password" #confirmPassword="ngModel" [(ngModel)]="user.confirmPassword"  placeholder="CONFIRM PASSWORD"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+          <p class="help-block" *ngIf="user.password != user.confirmPassword" >
+            Password must be match
+          </p>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <button ion-button full [disabled]="!fname.valid || !user.phone ||  user.phone?.length < 10 && user.number?.phone >= 1  || !lname.valid || !user.first_name || !user.last_name || ((user.oldPassword) && (user.password != user.confirmPassword) || !password.valid) || (!user.password && user.oldPassword)" (click)="updateUser()" class="signin-btn">SAVE CHANGES</button>
+            </ion-col>
+        </ion-row>
+        <ion-row class="advertisement">
+            <ion-col col-12>
+                <div class="your-advertising-box">
+                    <p>YOUR ADVERTISING<p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

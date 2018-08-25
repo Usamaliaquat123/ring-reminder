@@ -1,0 +1,9 @@
+{
+  "name": "com.RingReminder",
+  "app_id": "com.RingReminder",
+  "type": "ionic-angular",
+  "cache": "false",
+  "integrations": {
+    "cordova": {}
+  }
+}

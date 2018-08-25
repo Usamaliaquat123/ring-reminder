@@ -1,0 +1,55 @@
+page-aboutus {
+  .toolbar-background {
+    background: transparent;
+  }
+  .toolbar-title {
+    font-size: 25px;
+    color: #d0a737;
+    font-weight: 300;
+    text-align: center;
+  }
+  .content{
+    background-image: url("../assets/img/app-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  ion-icon.icon {
+    color: #d0a737;
+  }
+  .about-maingrid.grid {
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  .about-maingrid.grid h1 {
+    font-size: 35px;
+  }
+  .about-maingrid.grid p {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight:300;
+    margin:0px;
+  }
+  .advertisement {
+    position: fixed;
+    background: #d0a737;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+  }
+  .arrow-back-custom {
+    font-size: 25px;
+    right: 0px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  .open-menu-right {
+    position: absolute;
+    right: 15px;
+    /* margin: 0px; */
+  }
+}

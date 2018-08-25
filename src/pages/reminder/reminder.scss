@@ -1,0 +1,119 @@
+page-reminder {
+  .advertisement {
+    position: fixed;
+    background: #d0a737;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+  }
+  .advertisement {
+    position: fixed;
+    background: #d0a737;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+  }
+  .arrow-back-custom {
+    font-size: 25px;
+    right: 0px;
+    position: absolute;
+    left: 20px;
+    top:15px;
+
+  }
+  ion-icon.icon {
+    color: #d0a737;
+  }
+  .toolbar-background {
+    background: transparent;
+  }
+  .toolbar-title {
+    font-size: 25px;
+    color: #d0a737;
+    font-weight: 300;
+    text-align: center;
+  }
+  .content{
+    background-image: url("../assets/img/app-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .timeline-heading {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+  }
+  .timeline-heading h1 {
+    font-size: 2.8em;
+    font-weight: 300;
+  }
+  .timeline {
+    background: #d0a737;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 9px 0px;
+    font-size: 16px;
+    border: 1px solid #d0a737;
+    border-radius: 3px;
+  }
+  p.date-and-channel {
+    margin: 0px;
+    color:black;
+  }
+  p.match-result {
+    color: #d0a737;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+  p.matches {
+    color: white;
+    margin: 0px;
+    font-size: 1.2em;
+  }
+  .even-side {
+    text-align: right;
+    position: relative;
+    right: 20px;
+  }
+  .odd-side {
+    position: relative;
+    left: 20px;
+  }
+  .right-border {
+    border-right: 3px solid #d0a737;
+  }
+  .set-alarm {
+    background: #d0a737;
+    color: black;
+    font-weight: bold;
+    margin-top: 18px;
+  }
+  .even-side, .odd-side {
+    margin-bottom: 30px;
+  }
+  img.dot-img {
+    position: absolute;
+    right: -18px;
+    top: 0px;
+  }
+  img.glove-img {
+    position: absolute;
+    right: -20px;
+    top: 28px;
+  }
+  .open-menu-right {
+    position: absolute;
+    right: 15px;
+    /* margin: 0px; */
+  }
+  .golden{
+    color: #d0a737;
+    font-weight: bold;
+  }
+}

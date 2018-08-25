@@ -1,0 +1,132 @@
+page-register {
+
+  .advertisement {
+    position: fixed;
+    background: #d0a737;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+  }
+  .arrow-back-custom {
+    font-size: 25px;
+    right: 0px;
+    position: absolute;
+    left: 20px;
+    top:15px;
+
+  }
+  ion-icon.icon {
+    color: #d0a737;
+  }
+  .toolbar-background {
+    background: transparent;
+  }
+  .toolbar-title {
+    font-size: 25px;
+    color: #d0a737;
+    font-weight: 300;
+    text-align: center;
+  }
+  .content{
+    background-image: url("../assets/img/app-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .welcome_box h1 {
+    font-weight: 300;
+  }
+  .welcome_box {
+    text-align: center;
+    color: white;
+    font-weight: 300;
+  }
+  .registration-maingrid.grid {
+    padding: 10px 20px;
+  }
+  ion-item.input-item.item.item-block.item-input {
+    //padding-left: 45px;
+    font-size: 15px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+  }
+  .field-column.col input
+  {
+    padding-left: 20px;
+    color: white;
+  }
+  .field-column.col .name-field
+  {
+    background-image: url("../assets/img/name.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 14px auto
+  }
+  .field-column.col .phone-field
+  {
+    background-image: url("../assets/img/phone.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 14px auto;
+  }
+  .field-column.col .email-field
+  {
+    background-image: url("../assets/img/email2.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px auto;
+  }
+  .field-column.col .password-field
+  {
+    background-image: url("../assets/img/pass2.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px auto;
+
+  }
+  .field-column.col {
+    height: 65px;
+  }
+  .signin-btn {
+    background: #d0a737;
+    border-radius: 5px;
+    height: 55px;
+    color: #000;
+    margin-bottom:70px;
+  }
+  .registration-maingrid.grid ion-item.input-item.item.item-block.item-checkbox {
+    height: 0px;
+    background: transparent;
+    color: white;
+    border: none;
+    margin: 9px 6px 9px -10px;
+  }
+  ion-col.field-column.checkbox-column.col {
+    height: 50px;
+  }
+  .open-menu-right {
+    position: absolute;
+    right: 15px;
+    /* margin: 0px; */
+  }
+  #lbl-18 {
+    font-size: 0.8em;
+  }
+
+  #lbl-16 {
+    font-size: 11px;
+  }
+
+  .item.item-md .checkbox-md {
+    display: block;
+    margin: 9px 10px 9px -6px;
+    position: static;
+  }
+  .help-block{
+    color: red;
+  }
+
+}

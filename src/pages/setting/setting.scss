@@ -1,0 +1,97 @@
+page-setting {
+  .advertisement {
+    position: fixed;
+    background: #d0a737;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+  }
+  .arrow-back-custom {
+    font-size: 25px;
+    right: 0px;
+    position: absolute;
+    left: 20px;
+    top:15px;
+
+  }
+  ion-icon.icon {
+    color: #d0a737;
+  }
+  .toolbar-background {
+    background: transparent;
+  }
+  .toolbar-title {
+    font-size: 25px;
+    color: #d0a737;
+    font-weight: 300;
+    text-align: center;
+  }
+  .content{
+    background-image: url("../assets/img/app-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .welcome_box h1 {
+    font-weight: 300;
+  }
+  .welcome_box {
+  text-align: center;
+  color: white;
+  font-weight: 300;
+}
+  ion-item.item.item-block.item-input {
+    font-size: 15px;
+    height: 55px;
+    background: transparent;
+    border-bottom: 1px solid white;
+    border-radius: 0px;
+    color: white;
+    border-top: 0px;
+  }
+  .edit-btn {
+    background: transparent;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .edit-profile-column input {
+    padding-right: 48px;
+  }
+  .edit-profile-column {
+    height: 70px;
+  }
+  .signin-btn {
+    background: #d0a737;
+    border-radius: 5px;
+    height: 55px;
+    color: #000;
+    margin-bottom:70px;
+  }
+  .setting-grid.grid {
+    padding: 10px 20px;
+  }
+  .open-menu-right {
+    position: absolute;
+    right: 15px;
+    /* margin: 0px; */
+  }
+
+  .name-img {
+    max-width: 13px;
+  }
+  .phone-img {
+    max-width: 13px;
+  }
+  .email2-img {
+    max-width: 20px;
+  }
+  .pass2-img {
+    max-width: 20px;
+  }
+  .help-block{
+    color: red;
+  }
+}

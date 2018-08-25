@@ -1,0 +1,89 @@
+page-login {
+  .welcome_box {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+  }
+  p.forgot {
+    text-align: right;
+    color: white;
+  }
+  ion-item.email-field.item.item-block.item-input {
+    //padding-left: 45px;
+    font-size: 15px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+  }
+  ion-item.email-field.item.item-block.item-input ion-input.input
+  {
+    background-image: url("../assets/images/email2.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 40px;
+    //background-size: 8.5%;
+    color: white;
+  }
+  ion-item.password-field.item.item-block.item-input
+  {
+    font-size: 15px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+  }
+  ion-item.password-field.item.item-block.item-input ion-input.password-field.input
+  {
+    background-image: url("../assets/images/pass2.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 40px;
+    //background-size: 7%;
+    color: white;
+  }
+  .skip-timeline {
+    text-align: center;
+    color: #d0a737;
+  }
+  .advertisement {
+    position: fixed;
+    background: #d0a737;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+  }
+  .toolbar-background {
+    background: transparent;
+  }
+  .toolbar-title{
+    font-size: 25px;
+    color: #d0a737;
+    font-weight: 300;
+    text-align: center;
+  }
+  .content{
+    background-image: url("../assets/images/app-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .signin-btn {
+    background: #d0a737;
+    border-radius: 5px;
+    height: 60px;
+    color: #000;
+    margin:0px;
+  }
+  .field-column.col {
+    height: 70px;
+  }
+  p.reg {
+    color: #d0a737;
+  }
+  ion-icon.icon {
+    color: #d0a737;
+  }
+
+}

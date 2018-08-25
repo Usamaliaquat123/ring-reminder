@@ -1,0 +1,104 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle right style="display: block !important;">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <!--<ion-icon ios="ios-arrow-back" md="md-arrow-back" class="arrow-back-custom"></ion-icon>-->
+        <ion-title class="page-tittle-custom">Contact Us</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding classs="">
+    <ion-grid class="setting-grid">
+        <ion-row>
+            <ion-col col-12>
+                <div class="welcome_box">
+                    <h1>Contact Us</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 class="edit-profile-column">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/name.png" alt="" class="name-img">
+                        </ion-label>
+                        <ion-input type="text" #name="ngModel" pattern="^([a-z']+(-| )?)+$" [(ngModel)]="user.name"  placeholder="FULL NAME"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger help-block">
+            <div [hidden]="!name.hasError('pattern')">Only alphabets are allowed</div>
+          </div>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 class="edit-profile-column">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/phone.png" alt="" class="phone-img">
+                            <!--<button ion-button class="edit-btn">-->
+                                <!--<img class="edit-img" src="assets/img/edit.png" alt="" height="20px" width="20px">-->
+                            <!--</button>-->
+                        </ion-label>
+                        <ion-input type="number" [(ngModel)]="user.number" placeholder="NUMBER"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 class="edit-profile-column">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/email2.png" alt="" class="email2-img">
+                            <!--<button ion-button class="edit-btn">-->
+                                <!--<img class="edit-img" src="assets/img/edit.png" alt="" height="20px" width="20px">-->
+                            <!--</button>-->
+                        </ion-label>
+                        <ion-input type="email"  pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+\.[a-zA-Z]$"
+                                   #email="ngModel" [(ngModel)]="user.email" placeholder="EMAIL ADDRESS"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+          <div [hidden]="email.valid || email.pristine" class="alert alert-danger help-block">
+            <div [hidden]="!email.hasError('pattern')">Email format should be
+              <small><b>joe@abc.com</b></small>
+            </div>
+          </div>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 class="edit-profile-column textarea">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>
+                            <img src="assets/img/email2.png" alt=""class="email2-img">
+                            <!--<button ion-button class="edit-btn">-->
+                                <!--<img class="edit-img" src="assets/img/edit.png" alt="" height="20px" width="20px">-->
+                            <!--</button>-->
+                        </ion-label>
+                        <ion-input type="text" [(ngModel)]="user.message" placeholder="MESSAGE"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-12>
+                <button ion-button full class="signin-btn" [disabled]="!email.valid || !name.valid || !user.email || !user.name || !user.number || !user.message " (click)="contact()">SEND MESSAGE</button>
+            </ion-col>
+        </ion-row>
+        <div class="lastmargin"></div>
+        <ion-row class="advertisement">
+            <ion-col col-12>
+                <div class="your-advertising-box">
+                    <p>YOUR ADVERTISING<p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

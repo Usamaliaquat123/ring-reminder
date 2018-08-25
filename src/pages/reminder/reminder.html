@@ -1,0 +1,129 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle right style="display: block !important;">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <!--<ion-icon ios="ios-arrow-back" md="md-arrow-back" class="arrow-back-custom"></ion-icon>-->
+        <ion-title class="page-tittle-custom">Reminder</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding classs="">
+    <ion-grid class="reminder_grid">
+        <ion-row>
+            <ion-col col-12 class="timeline-heading">
+                <h1>Timeline Reminder</h1>
+                <div class="timeline">
+                    <p class="date-and-channel">
+                        <span class="date">{{date}} </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="channel-name">{{channel}}</span>
+                    </p>
+                </div>
+            </ion-col>
+        </ion-row>
+      <div *ngFor="let match of matchList;let i = index" [attr.data-index]="i">
+        <ion-row *ngIf="match.even">
+            <ion-col col-6  class="timeline-box-even right-border">
+                <img class="dot-img" src="assets/img/dot.png" alt="" height="32.5px" width="32.5px">
+                <img class="glove-img" *ngIf="glovesId == match.MatchId" src="assets/img/gloves2.png" alt="" height="50px" width="36px">
+                <div class="even-side">
+                    <p class="match-result" *ngIf="match.WinnerName">{{match.WinnerName}} WON</p>
+                    <p class="match-result" *ngIf="match.status == 2">Match Draw</p>
+                    <p class="matches">
+                        <span class="opponent-one" *ngIf="!match.is_featured">{{match.FistBoxerName}}</span>
+                        <span class="opponent-one golden" *ngIf="match.is_featured">{{match.FistBoxerName}}</span>
+                        <span class="vs">VS</span><br>
+                        <span class="opponent-two" *ngIf="!match.is_featured">{{match.SecondBoxerName}}</span>
+                        <span class="opponent-two golden" *ngIf="match.is_featured">{{match.SecondBoxerName}}</span>
+                      <br *ngIf="!match.WinnerName">
+                      <button ion-button class="set-alarm" *ngIf="!match.WinnerName && match.subscription == false" (click)="setAlarm(match.start_date,match.MatchId,i)">SET ALARM</button>
+                    </p>
+                </div>
+            </ion-col>
+            <ion-col col-6 class="blank-col-even"></ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="!match.even">
+          <ion-col col-6 class="blank-col-odd right-border">
+            <img class="dot-img" src="assets/img/dot.png" alt="" height="32.5px" width="32.5px">
+            <img class="glove-img" *ngIf="glovesId == match.MatchId" src="assets/img/gloves2.png" alt="" height="50px" width="36px">
+          </ion-col>
+          <ion-col col-6 class="timeline-box-odd">
+            <div class="odd-side">
+              <p class="match-result" *ngIf="match.WinnerName">{{WinnerName}} WON</p>
+              <p class="match-result" *ngIf="match.status == 2">MATCH DRAW</p>
+              <p class="matches">
+                <span class="opponent-one" *ngIf="!match.is_featured">{{match.FistBoxerName}}</span>
+                <span class="opponent-one golden" *ngIf="match.is_featured">{{match.FistBoxerName}}</span>
+                <span class="vs">VS</span><br>
+                <span class="opponent-two" *ngIf="!match.is_featured">{{match.SecondBoxerName}}</span>
+                <span class="opponent-two golden" *ngIf="match.is_featured">{{match.SecondBoxerName}}</span>
+                <br *ngIf="!match.WinnerName">
+                <button *ngIf="!match.WinnerName && match.subscription == false" ion-button class="set-alarm" (click)="setAlarm(match.start_date,match.MatchId,i)">SET ALARM</button>
+              </p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!--<ion-row>-->
+            <!--<ion-col col-6 class="blank-col-odd right-border">-->
+                <!--<img class="dot-img" src="assets/img/dot.png" alt="" height="32.5px" width="32.5px">-->
+                <!--&lt;!&ndash;<img class="glove-img" src="assets/img/gloves2.png" alt="" height="50px" width="36px">&ndash;&gt;-->
+            <!--</ion-col>-->
+            <!--<ion-col col-6 class="timeline-box-odd">-->
+                <!--<div class="odd-side">-->
+                    <!--<p class="match-result">MATCH DRAW</p>-->
+                    <!--<p class="matches">-->
+                        <!--<span class="opponent-one">BOXER 3</span>-->
+                        <!--<span class="vs">VS</span><br>-->
+                        <!--<span class="opponent-two">BOXER 4</span>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</ion-col>-->
+        <!--</ion-row>-->
+        <!--<ion-row>-->
+            <!--<ion-col col-6 class="timeline-box-even right-border">-->
+                <!--<img class="dot-img" src="assets/img/dot.png" alt="" height="32.5px" width="32.5px">-->
+                <!--&lt;!&ndash;<img class="glove-img" src="assets/img/gloves2.png" alt="" height="50px" width="36px">&ndash;&gt;-->
+                <!--<div class="even-side">-->
+                    <!--<p class="match-result">BOXER 5 WON</p>-->
+                    <!--<p class="matches">-->
+                        <!--<span class="opponent-one">BOXER 5</span>-->
+                        <!--<span class="vs">VS</span><br>-->
+                        <!--<span class="opponent-two">BOXER 6</span>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</ion-col>-->
+            <!--<ion-col col-6 class="blank-col-even"></ion-col>-->
+
+        <!--</ion-row>-->
+
+      </div>
+        <!--<ion-row>-->
+            <!--<ion-col col-6 class="timeline-box-even right-border">-->
+                <!--<img class="dot-img" src="assets/img/dot.png" alt="" height="32.5px" width="32.5px">-->
+                <!--&lt;!&ndash;<img class="glove-img" src="assets/img/gloves2.png" alt="" height="50px" width="36px">&ndash;&gt;-->
+                <!--<div class="even-side">-->
+                    <!--&lt;!&ndash;<p class="match-result">BOXER 1 WON</p>&ndash;&gt;-->
+                    <!--<p class="matches">-->
+                        <!--<span class="opponent-one">BOXER 9</span>-->
+                        <!--<span class="vs">VS</span><br>-->
+                        <!--<span class="opponent-two">BOXER 10</span>-->
+                        <!--<br>-->
+                        <!--<button ion-button class="set-alarm">SET ALARM</button>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</ion-col>-->
+            <!--<ion-col col-6 class="blank-col-even"></ion-col>-->
+        <!--</ion-row>-->
+        <div class="lastmargin"></div>
+        <ion-row class="advertisement">
+            <ion-col col-12>
+                <div class="your-advertising-box">
+                    <p>YOUR ADVERTISING<p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
