@@ -26,8 +26,8 @@
       <div *ngFor="let match of matchList;let i = index" [attr.data-index]="i">
         <ion-row *ngIf="match.even">
             <ion-col col-6  class="timeline-box-even right-border">
-                <img class="dot-img" src="assets/img/dot.png" alt="" height="32.5px" width="32.5px">
-                <img class="glove-img" *ngIf="glovesId == match.MatchId" src="assets/img/gloves2.png" alt="" height="50px" width="36px">
+                <img class="dot-img" src="/assets/img/dot.png" alt="" height="32.5px" width="32.5px">
+                <img class="glove-img" *ngIf="glovesId == match.MatchId" src="/assets/img/gloves2.png" alt="" height="50px" width="36px">
                 <div class="even-side">
                     <p class="match-result" *ngIf="match.WinnerName">{{match.WinnerName}} WON</p>
                     <p class="match-result" *ngIf="match.status == 2">Match Draw</p>
@@ -47,8 +47,8 @@
 
         <ion-row *ngIf="!match.even">
           <ion-col col-6 class="blank-col-odd right-border">
-            <img class="dot-img" src="assets/img/dot.png" alt="" height="32.5px" width="32.5px">
-            <img class="glove-img" *ngIf="glovesId == match.MatchId" src="assets/img/gloves2.png" alt="" height="50px" width="36px">
+            <img class="dot-img" src="/assets/img/dot.png" alt="" height="32.5px" width="32.5px">
+            <img class="glove-img" *ngIf="glovesId == match.MatchId" src="/assets/img/gloves2.png" alt="" height="50px" width="36px">
           </ion-col>
           <ion-col col-6 class="timeline-box-odd">
             <div class="odd-side">

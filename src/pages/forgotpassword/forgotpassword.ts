@@ -15,8 +15,8 @@ export class ForgotPasswordPage {
   }
   forgetAlert() {
     let alert = this.alertCtrl.create({
-      title: 'Password sent Success',
-      subTitle: 'Email sent successfully. Please check your email',
+      title: 'Password changed',
+      subTitle: 'We have sent your account credentials to your email',
       buttons: ['OK']
     });
     alert.present();
