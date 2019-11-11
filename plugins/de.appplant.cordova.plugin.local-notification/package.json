@@ -54,8 +54,8 @@
   },
   "cordova_name": "Cordova LocalNotification Plugin",
   "dependencies": {
-    "cordova-plugin-app-event": ">=1.1.0",
-    "cordova-plugin-device": "*"
+    "cordova-plugin-app-event": "1.2.2",
+    "cordova-plugin-device": "^2.0.3"
   },
   "description": "Schedules and queries for local notifications",
   "devDependencies": {},
