@@ -64,8 +64,8 @@
   "dependencies": {},
   "description": "Register and receive push notifications.",
   "devDependencies": {
-    "jasmine-node": "1.14.5",
-    "pluginpub": "^0.0.8"
+    "jasmine-node": "3.0.0",
+    "pluginpub": "^0.0.9"
   },
   "directories": {},
   "dist": {
